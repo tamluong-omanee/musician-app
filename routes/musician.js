@@ -6,11 +6,11 @@ const schema = require('../store/schema');
 
 // healthcheck
 router.get('/health', (req, res) => {
-  res.status('200').send("Status: ok!");
+  res.status('200').send("apps ok!");
 });
 
 // retrieve all musicians from data store
-router.get('/all', (req, res) => {
+rou ter.get('/all', (req, res) => {
   const { musician } = req.app.locals;
   musician.getMusicians(req.params.id, (err, returnedMusicians) => {
     if (err) {
